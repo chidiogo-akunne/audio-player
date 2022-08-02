@@ -4,7 +4,14 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["src/*"]
+      "@app/*": ["src/*"],
+      "@libs/*": ["src/libs/*"],
+      "@assets/*": ["assets/*"],
+      "@screens/*": ["src/screens/*"],
+      "@theme": ["src/theme/index.tsx"],
+      "@navigator/*": ["src/navigator/*"],
+      "@components/*": ["src/components/*"],
+      "@constants": ["src/constants/index.ts"]
     }
   }
 }

@@ -3,7 +3,6 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      'module:react-native-dotenv',
       [
         'module-resolver',
         {
@@ -11,7 +10,14 @@ module.exports = function (api) {
           extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
           alias: {
             '@app': ['./src'],
-            tests: ['./tests']
+            tests: ['./tests'],
+            '@assets': ['./assets'],
+            '@screens': ['./src/screens'],
+            '@navigator': ['./src/navigator'],
+            '@components': ['./src/components'],
+            '@theme': ['./src/theme/index.tsx'],
+            '@constants': ['./src/constants/index.ts'],
+            '@libs': ['./src/libs']
           }
         }
       ]
