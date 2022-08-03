@@ -1,6 +1,7 @@
 import { TouchableOpacity, Image } from 'react-native';
 import Favorite from '../favorite';
 import Ratings from '../starRating';
+import { DataType } from 'typings/types';
 
 import {
   Container,
@@ -11,7 +12,12 @@ import {
   FavoriteCover
 } from './styles';
 
-export default function AudioCard() {
+interface AudioCardProp {
+  item: DataType;
+}
+
+export default function AudioCard({ item }: AudioCardProp) {
+  const { title, cover } = item;
   return (
     <TouchableOpacity>
       <Container>
@@ -21,8 +27,7 @@ export default function AudioCard() {
           </RatingCover>
           <Image
             source={{
-              uri:
-                'https://raw.githubusercontent.com/Learnfield-GmbH/CodingChallange/master/shared/simple%20audio%20player/data/Oceansound.png'
+              uri: cover
             }}
             style={{
               resizeMode: 'cover',
@@ -32,7 +37,7 @@ export default function AudioCard() {
           />
         </UpperCover>
         <LowerCover>
-          <Title>Song 1</Title>
+          <Title>{title}</Title>
           <FavoriteCover>
             <Favorite />
           </FavoriteCover>
