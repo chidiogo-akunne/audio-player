@@ -15,3 +15,33 @@ export const Text = styled.Text`
   text-align: center;
   margin: ${RFValue(2)}px 0;
 `;
+
+export const FavoriteCover = styled.View`
+  position: absolute;
+  align-self: flex-end;
+  top: ${RFValue(195)}px;
+  z-index: 99999;
+  margin-right: ${RFValue(5)}px;
+`;
+
+export const AudioCover = styled.View`
+  height: ${RFValue(250)}px;
+  width: 95%;
+  align-self: center;
+`;
+
+export const Overlay = styled.View`
+  background-color: ${({ theme }) => theme.colors.BLACK};
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+`;
+
+export const IconCover = styled.View`
+  position: relative;
+  align-self: center;
+  top: ${RFValue(90)}px;
+`;

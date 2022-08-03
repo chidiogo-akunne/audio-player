@@ -3,12 +3,22 @@ import { DataType } from 'typings/types';
 import { RFValue } from 'react-native-responsive-fontsize';
 import Ratings from '@components/starRating';
 import { Audio } from 'expo-av';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import { useIsFocused } from '@react-navigation/native';
 import Slider from '@components/slider';
 import { millisecondToSeconds } from '@utils/timeFormatter';
+import Favorite from '@components/favorite';
+import { AntDesign } from '@expo/vector-icons';
+import { useAppTheme } from '@app/theme';
 
-import { Container, Text } from './styles';
+import {
+  Container,
+  Text,
+  FavoriteCover,
+  AudioCover,
+  Overlay,
+  IconCover
+} from './styles';
 
 interface PlayAudioProp {
   route: {
@@ -21,6 +31,7 @@ export default function AudioScreen(props: PlayAudioProp) {
     route: { params }
   } = props;
   const { item } = params;
+  const { colors } = useAppTheme();
   const isFocused = useIsFocused();
   const [sound, setSound] = useState<any>({});
   const [isPlaying, setisPlaying] = useState(false);
@@ -75,24 +86,43 @@ export default function AudioScreen(props: PlayAudioProp) {
   useEffect(() => {
     if (!isFocused) {
       setisPlaying(false);
-      sound?.unloadAsync();
+      sound && sound?.unloadAsync();
     }
   }, [isFocused]);
 
   return (
     <Container>
       <TouchableOpacity onPress={Playpause}>
-        <Image
-          source={{
-            uri: item?.cover
-          }}
-          style={{
-            resizeMode: 'cover',
-            width: '95%',
-            height: RFValue(250),
-            alignSelf: 'center'
-          }}
-        />
+        <AudioCover>
+          <IconCover>
+            {isPlaying ? (
+              <AntDesign
+                name="pausecircle"
+                size={RFValue(80)}
+                color={colors.BLACK}
+              />
+            ) : (
+              <AntDesign name="play" size={RFValue(80)} color={colors.BLACK} />
+            )}
+          </IconCover>
+          <Overlay>
+            <Image
+              source={{
+                uri: item?.cover
+              }}
+              style={{
+                resizeMode: 'cover',
+                width: '100%',
+                height: '100%',
+                position: 'relative',
+                alignSelf: 'center'
+              }}
+            />
+          </Overlay>
+          <FavoriteCover>
+            <Favorite item={item} size={65} />
+          </FavoriteCover>
+        </AudioCover>
       </TouchableOpacity>
       <Slider
         positionMillis={positionMillis}
