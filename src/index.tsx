@@ -5,15 +5,18 @@ import { StatusBar } from 'expo-status-bar';
 import ThemeProvider from './theme';
 import Router from './router';
 import GlobalErrorBoundary from '@libs/error';
+import { ContextThemeProvider } from './context';
 
 export default function AppRouter() {
   return (
     <GlobalErrorBoundary>
       <SafeAreaProvider>
         <ThemeProvider>
-          <StatusBar translucent animated style="dark" />
-          <RootToaster />
-          <Router />
+          <ContextThemeProvider>
+            <StatusBar translucent animated style="dark" />
+            <RootToaster />
+            <Router />
+          </ContextThemeProvider>
         </ThemeProvider>
       </SafeAreaProvider>
     </GlobalErrorBoundary>
