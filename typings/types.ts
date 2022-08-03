@@ -4,3 +4,10 @@ export interface DataType {
   cover: string;
   totalDurations: number;
 }
+
+export interface StarRatingType {
+  rating: {
+    rate: number;
+    tile: DataType;
+  }[];
+}
