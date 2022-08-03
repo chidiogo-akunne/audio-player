@@ -1,4 +1,5 @@
 // ALL APP CONSTANTS
+export const STAR_RATINGS: string = '@STAR_RATINGS';
 
 // ALL PAGE LOGICAL CONSTANTS
 export const PAGINATION_DEFAULT: number = 15;
