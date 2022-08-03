@@ -39,7 +39,7 @@ export default function AudioCard({ item }: AudioCardProp) {
         <LowerCover>
           <Title>{title}</Title>
           <FavoriteCover>
-            <Favorite />
+            <Favorite item={item} />
           </FavoriteCover>
         </LowerCover>
       </Container>
