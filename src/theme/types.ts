@@ -10,6 +10,7 @@ enum COLORS {
   GREY = '#989898',
   GREY_DARK = '#686868',
   INPUT = '#F0F0F0',
+  RED = '#FF0000',
   TRANSPARENT = 'transparent'
 }
 
@@ -39,6 +40,7 @@ declare module 'styled-components' {
       GREY: string;
       GREY_DARK: string;
       INPUT: string;
+      RED: string;
     };
 
     // All Global App Font Sizes
