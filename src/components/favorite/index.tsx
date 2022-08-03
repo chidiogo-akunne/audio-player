@@ -37,12 +37,12 @@ export default function Favorite(props: FavoriteProp) {
     <TouchableOpacity onPress={handleChange}>
       <Fragment>
         {checkIsFovarite ? (
-          <MaterialIcons name="favorite" size={size} color={colors.RED} />
+          <MaterialIcons name="favorite" size={size} color={colors.BLACK} />
         ) : (
           <MaterialIcons
             name="favorite-border"
             size={size}
-            color={colors.SECONDARY}
+            color={colors.BLACK}
           />
         )}
       </Fragment>
