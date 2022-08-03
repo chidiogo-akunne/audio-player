@@ -6,12 +6,14 @@ export type RootStackParamList = {
   SplashScreen?: Object;
   HomeScreen?: Object;
   BaseScreen?: Object;
+  AudioScreen?: Object;
 };
 
 export type RootStackParamScreensList =
   | 'SplashScreen'
   | 'HomeScreen'
-  | 'BaseScreen';
+  | 'BaseScreen'
+  | 'AudioScreen';
 
 interface StackScreenInterface extends StackActionHelpers {
   navigation: StackNavigationProp<RootStackParamList, string>;
