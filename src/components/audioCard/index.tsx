@@ -2,6 +2,8 @@ import { TouchableOpacity, Image } from 'react-native';
 import Favorite from '../favorite';
 import Ratings from '../starRating';
 import { DataType } from 'typings/types';
+import { useNavigation } from '@react-navigation/native';
+import { NavigationInterface } from 'typings/screens';
 
 import {
   Container,
@@ -18,8 +20,11 @@ interface AudioCardProp {
 
 export default function AudioCard({ item }: AudioCardProp) {
   const { title, cover } = item;
+  const navigation = useNavigation<NavigationInterface>();
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => navigation.navigate('AudioScreen', { item })}
+    >
       <Container>
         <UpperCover>
           <RatingCover>
