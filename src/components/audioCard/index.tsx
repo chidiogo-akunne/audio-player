@@ -28,7 +28,7 @@ export default function AudioCard({ item }: AudioCardProp) {
       <Container>
         <UpperCover>
           <RatingCover>
-            <Ratings />
+            <Ratings disabled={true} item={item} />
           </RatingCover>
           <Image
             source={{
