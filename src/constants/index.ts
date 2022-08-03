@@ -6,6 +6,7 @@ export const LANGUAGE_DEFAULT: string = 'en';
 
 // APP HEADER SETTING
 export const GLOBAL_HEADER_STYLE = {
+  backgroundColor: '#F8F8F8',
   shadowOpacity: 0,
   shadowOffset: { height: 0, width: 0 },
   shadowRadius: 0,
