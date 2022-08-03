@@ -5,5 +5,5 @@ export const Container = styled.View`
   flex: 1;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.PRIMARY};
-  padding: ${RFValue(15)}px;
+  padding: ${RFValue(10)}px;
 `;
