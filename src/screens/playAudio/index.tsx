@@ -22,7 +22,7 @@ export default function AudioScreen(props: PlayAudioProp) {
   } = props;
   const { item } = params;
   const isFocused = useIsFocused();
-  const [sound, setSound] = useState();
+  const [sound, setSound] = useState<any>({});
   const [isPlaying, setisPlaying] = useState(false);
   const [state, setState] = useState({
     isBuffering: false,
@@ -32,8 +32,8 @@ export default function AudioScreen(props: PlayAudioProp) {
   });
 
   const { positionMillis, durationMillis } = state;
-  const positionSeconds = millisecondToSeconds(positionMillis);
-  const durationSeconds = millisecondToSeconds(durationMillis);
+  const positionSeconds = millisecondToSeconds(positionMillis || 0);
+  const durationSeconds = millisecondToSeconds(durationMillis || 0);
 
   const loadSound = async () => {
     const source = { uri: item.audio };
@@ -51,8 +51,7 @@ export default function AudioScreen(props: PlayAudioProp) {
     setisPlaying(!isPlaying);
   };
 
-  const onPlaybackStatusUpdate = (status) => {
-    console.log('status4', status);
+  const onPlaybackStatusUpdate = (status: any) => {
     setState({
       ...state,
       isBuffering: status.isBuffering,
@@ -61,7 +60,7 @@ export default function AudioScreen(props: PlayAudioProp) {
     });
   };
 
-  const onSlidingComplete = async (value) => {
+  const onSlidingComplete = async (value: number) => {
     const currentDuration = value * durationMillis;
     setState({
       ...state,
@@ -101,7 +100,7 @@ export default function AudioScreen(props: PlayAudioProp) {
         onSlidingComplete={(value) => onSlidingComplete(value)}
       />
       <Text>{`${positionSeconds}/${durationSeconds}`}</Text>
-      <Ratings starSize={60} style={{ alignSelf: 'center' }} />
+      <Ratings starSize={60} style={{ alignSelf: 'center' }} item={item} />
     </Container>
   );
 }
