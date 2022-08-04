@@ -11,7 +11,7 @@ const BaseStack = createStackNavigator();
 export default function BaseNavigator() {
   const { colors, fonts } = useAppTheme();
   return (
-    <BaseStack.Navigator>
+    <BaseStack.Navigator screenOptions={{ headerTitleAlign: 'center' }}>
       <BaseStack.Screen
         name="HomeScreen"
         component={Screens.HomeScreen}
@@ -23,7 +23,8 @@ export default function BaseNavigator() {
                 style={{
                   color: colors.BLACK,
                   fontSize: RFValue(fonts.LARGE_SIZE + 5),
-                  fontFamily: fonts.POPPINS_MEDIUM
+                  fontFamily: fonts.POPPINS_MEDIUM,
+                  textAlign: 'center'
                 }}
               >
                 Skoovin
