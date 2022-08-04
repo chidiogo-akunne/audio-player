@@ -17,7 +17,9 @@ module.exports = function (api) {
             '@components': ['./src/components'],
             '@theme': ['./src/theme/index.tsx'],
             '@constants': ['./src/constants/index.ts'],
-            '@libs': ['./src/libs']
+            '@libs': ['./src/libs'],
+            '@utils': ['./src/utils'],
+            '@context': ['./src/context']
           }
         }
       ]

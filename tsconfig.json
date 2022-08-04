@@ -6,12 +6,14 @@
     "paths": {
       "@app/*": ["src/*"],
       "@libs/*": ["src/libs/*"],
+      "@utils/*": ["src/utils/*"],
       "@assets/*": ["assets/*"],
       "@screens/*": ["src/screens/*"],
       "@theme": ["src/theme/index.tsx"],
       "@navigator/*": ["src/navigator/*"],
       "@components/*": ["src/components/*"],
-      "@constants": ["src/constants/index.ts"]
+      "@constants": ["src/constants/index.ts"],
+      "@context/*": ["src/context/*"]
     }
   }
 }
