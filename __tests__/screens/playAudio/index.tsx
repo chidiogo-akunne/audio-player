@@ -4,6 +4,7 @@ import ThemeProvider from '@theme';
 import { ContextThemeProvider } from '@context/index';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { mockedData } from '__mocks__/mockedData';
+import { waitFor } from '@testing-library/react-native';
 
 jest.useFakeTimers();
 
@@ -26,7 +27,10 @@ describe('Audio Player', () => {
       </QueryClientProvider>
     </ThemeProvider>
   );
-  it(`renders correctly`, async () => {
-    await expect(tree).toMatchSnapshot();
+
+  it(`renders correctly`, () => {
+    waitFor(async () => {
+      await expect(tree).toMatchSnapshot();
+    });
   });
 });
