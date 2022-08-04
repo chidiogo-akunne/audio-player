@@ -23,6 +23,7 @@ export default function AudioCard({ item }: AudioCardProp) {
   const navigation = useNavigation<NavigationInterface>();
   return (
     <TouchableOpacity
+      testID={'audioCard'}
       onPress={() => navigation.navigate('AudioScreen', { item })}
     >
       <Container>

@@ -43,6 +43,7 @@ export default function Rating(props: RatingProp) {
 
   return (
     <StarRating
+      testID={'starRating'}
       rating={rating}
       onChange={(rate: number) => ratingCompleted(rate)}
       maxStars={5}

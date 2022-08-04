@@ -16,7 +16,7 @@ export default function SeekBar(props: SliderProp) {
   const sliderValue = positionMillis / durationMillis;
 
   return (
-    <Container>
+    <Container testID={'slider'}>
       <Slider
         value={sliderValue || 0}
         minimumValue={0}

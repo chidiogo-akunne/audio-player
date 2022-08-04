@@ -34,7 +34,7 @@ export default function Favorite(props: FavoriteProp) {
   };
 
   return (
-    <TouchableOpacity onPress={handleChange}>
+    <TouchableOpacity onPress={handleChange} testID={'favorite'}>
       <Fragment>
         {checkIsFovarite ? (
           <MaterialIcons name="favorite" size={size} color={colors.BLACK} />
