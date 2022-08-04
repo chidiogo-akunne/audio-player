@@ -6,17 +6,23 @@ import ThemeProvider from './theme';
 import Router from './router';
 import GlobalErrorBoundary from '@libs/error';
 import { ContextThemeProvider } from './context';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+// Create a react queultry client
+const queryClient = new QueryClient();
 
 export default function AppRouter() {
   return (
     <GlobalErrorBoundary>
       <SafeAreaProvider>
         <ThemeProvider>
-          <ContextThemeProvider>
-            <StatusBar translucent animated style="dark" />
-            <RootToaster />
-            <Router />
-          </ContextThemeProvider>
+          <QueryClientProvider client={queryClient}>
+            <ContextThemeProvider>
+              <StatusBar translucent animated style="dark" />
+              <RootToaster />
+              <Router />
+            </ContextThemeProvider>
+          </QueryClientProvider>
         </ThemeProvider>
       </SafeAreaProvider>
     </GlobalErrorBoundary>
