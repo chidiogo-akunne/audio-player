@@ -1,0 +1,504 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Audio Player renders correctly 1`] = `
+<View
+  collapsable={false}
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F8F8F8",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "paddingBottom": 29,
+          "paddingLeft": 29,
+          "paddingRight": 29,
+          "paddingTop": 59,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignSelf": "center",
+              "height": 490,
+              "width": "95%",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "position": "relative",
+                "top": 177,
+              },
+            ]
+          }
+        >
+          <Text />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#000000",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 0.2,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://raw.githubusercontent.com/Learnfield-GmbH/CodingChallange/master/react%20native/simple%20audio%20player/data/Nightlife.png",
+              }
+            }
+            style={
+              Object {
+                "alignSelf": "center",
+                "height": "100%",
+                "position": "relative",
+                "resizeMode": "cover",
+                "width": "100%",
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "flex-end",
+                "marginRight": 10,
+                "position": "absolute",
+                "top": 383,
+                "zIndex": 99999,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+            testID="favorite"
+          >
+            <Text />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "marginTop": 59,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="slider"
+    >
+      <RNCSlider
+        disabled={false}
+        enabled={true}
+        inverted={false}
+        maximumTrackTintColor="#989898"
+        maximumValue={1}
+        minimumTrackTintColor="#686868"
+        minimumValue={0}
+        onChange={null}
+        onRNCSliderSlidingComplete={[Function]}
+        onRNCSliderSlidingStart={null}
+        onRNCSliderValueChange={null}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        step={0}
+        style={
+          Array [
+            Object {
+              "height": 40,
+            },
+            Object {
+              "height": 98,
+              "width": "100%",
+            },
+          ]
+        }
+        tapToSeek={false}
+        thumbImage={null}
+        value={0}
+      />
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontFamily": "POPPINS_SEMIBOLD",
+            "fontSize": 37,
+            "marginBottom": 4,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "marginTop": 4,
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      0:00/0:00
+    </Text>
+    <View
+      onLayout={[Function]}
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-start",
+            "flexDirection": "row",
+          },
+          Object {
+            "alignSelf": "center",
+          },
+        ]
+      }
+      testID="starRating"
+    >
+      <View
+        collapsable={false}
+        pointerEvents="none"
+        style={
+          Object {
+            "marginHorizontal": 5,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={60}
+          bbWidth={60}
+          focusable={false}
+          height={60}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 60,
+                "width": 60,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={60}
+        >
+          <RNSVGGroup>
+            <RNSVGPath
+              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+              fill={4278190080}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <View
+        collapsable={false}
+        pointerEvents="none"
+        style={
+          Object {
+            "marginHorizontal": 5,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={60}
+          bbWidth={60}
+          focusable={false}
+          height={60}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 60,
+                "width": 60,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={60}
+        >
+          <RNSVGGroup>
+            <RNSVGPath
+              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+              fill={4278190080}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <View
+        collapsable={false}
+        pointerEvents="none"
+        style={
+          Object {
+            "marginHorizontal": 5,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={60}
+          bbWidth={60}
+          focusable={false}
+          height={60}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 60,
+                "width": 60,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={60}
+        >
+          <RNSVGGroup>
+            <RNSVGPath
+              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+              fill={4278190080}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <View
+        collapsable={false}
+        pointerEvents="none"
+        style={
+          Object {
+            "marginHorizontal": 5,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={60}
+          bbWidth={60}
+          focusable={false}
+          height={60}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 60,
+                "width": 60,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={60}
+        >
+          <RNSVGGroup>
+            <RNSVGPath
+              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+              fill={4278190080}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <View
+        collapsable={false}
+        pointerEvents="none"
+        style={
+          Object {
+            "marginHorizontal": 5,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={60}
+          bbWidth={60}
+          focusable={false}
+          height={60}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 60,
+                "width": 60,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={60}
+        >
+          <RNSVGGroup>
+            <RNSVGPath
+              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+              fill={4278190080}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;

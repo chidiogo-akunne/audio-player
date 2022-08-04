@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider renders correctly 1`] = `
+<View
+  collapsable={false}
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "marginTop": 59,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="slider"
+  >
+    <RNCSlider
+      disabled={false}
+      enabled={true}
+      inverted={false}
+      maximumTrackTintColor="#989898"
+      maximumValue={1}
+      minimumTrackTintColor="#686868"
+      minimumValue={0}
+      onChange={null}
+      onRNCSliderSlidingComplete={[Function]}
+      onRNCSliderSlidingStart={null}
+      onRNCSliderValueChange={null}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      step={0}
+      style={
+        Array [
+          Object {
+            "height": 40,
+          },
+          Object {
+            "height": 98,
+            "width": "100%",
+          },
+        ]
+      }
+      tapToSeek={false}
+      thumbImage={null}
+      value={0}
+    />
+  </View>
+</View>
+`;
