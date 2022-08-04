@@ -1,5 +1,6 @@
 // ALL APP CONSTANTS
 export const STAR_RATINGS: string = '@STAR_RATINGS';
+export const FAVORITE: string = '@FAVORITE';
 
 // ALL PAGE LOGICAL CONSTANTS
 export const PAGINATION_DEFAULT: number = 15;
