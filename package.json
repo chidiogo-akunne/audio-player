@@ -16,6 +16,7 @@
     "@react-navigation/native": "^6.0.11",
     "@react-navigation/stack": "^6.2.2",
     "@types/jest": "^28.1.6",
+    "@types/react-test-renderer": "^18.0.0",
     "@types/styled-components-react-native": "^5.1.1",
     "axios": "^0.27.2",
     "expo": "~45.0.0",
@@ -54,7 +55,14 @@
   "jest": {
     "preset": "jest-expo",
     "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
+      "@testing-library/jest-native/extend-expect",
+      "<rootDir>/__mocks__/config/jest.setup.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
