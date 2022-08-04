@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { STAR_RATINGS } from '@constants';
-import { StarRatingType } from 'typings/types';
+import { STAR_RATINGS, FAVORITE } from '@constants';
+import { StarRatingType, DataType } from 'typings/types';
 
 class Storage {
   async clearStorage() {
@@ -33,6 +33,18 @@ class Storage {
     } else {
       await AsyncStorage.setItem(STAR_RATINGS, JSON.stringify(data));
     }
+  }
+
+  async checkFavorite() {
+    return AsyncStorage.getItem(FAVORITE);
+  }
+
+  async setFavorite(like?: DataType) {
+    return await AsyncStorage.setItem(FAVORITE, JSON.stringify(like));
+  }
+
+  async resetFavorite() {
+    return AsyncStorage.setItem(FAVORITE, '');
   }
 }
 
