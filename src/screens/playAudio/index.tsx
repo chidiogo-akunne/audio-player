@@ -3,7 +3,7 @@ import { DataType } from 'typings/types';
 import { RFValue } from 'react-native-responsive-fontsize';
 import Ratings from '@components/starRating';
 import { Audio } from 'expo-av';
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect } from 'react';
 import { useIsFocused } from '@react-navigation/native';
 import Slider from '@components/slider';
 import { millisecondToSeconds } from '@utils/timeFormatter';
@@ -77,16 +77,21 @@ export default function AudioScreen(props: PlayAudioProp) {
       ...state,
       positionMillis: Math.floor(currentDuration)
     });
+    sound.playFromPositionAsync(Math.floor(currentDuration));
+    setisPlaying(true);
   };
 
   useEffect(() => {
     loadSound();
   }, []);
 
+  const stopAudio = async () => {
+    sound.unloadAsync();
+  };
+
   useEffect(() => {
     if (!isFocused) {
-      setisPlaying(false);
-      sound && sound?.unloadAsync();
+      stopAudio();
     }
   }, [isFocused]);
 
