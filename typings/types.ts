@@ -11,3 +11,7 @@ export interface StarRatingType {
     tile: DataType;
   }[];
 }
+
+export type DataResponseType = {
+  data: DataType[];
+};
